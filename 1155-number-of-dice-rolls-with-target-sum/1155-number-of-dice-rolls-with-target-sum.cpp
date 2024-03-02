@@ -7,8 +7,8 @@ class Solution {
 
     while (n-- > 0) {  // n dices
       vector<int> newDp(target + 1);
-      for (int i = 1; i <= k; ++i)           // numbers 1, 2, ..., f
-        for (int t = i; t <= target; ++t) {  // all the possible targets
+      for (int i = 1; i <= k; ++i)  
+        for (int t = i; t <= target; ++t) { 
           newDp[t] += dp[t - i];
           newDp[t] %= kMod;
         }
